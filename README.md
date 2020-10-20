@@ -1,4 +1,70 @@
-# Burnout
+<img src="https://user-images.githubusercontent.com/22374750/90978874-f01f0100-e58b-11ea-9b35-ec1d4529ee57.png" width="128" height="128">
+
+# Burnout Challenge 🧯
+
+[![Android11](https://img.shields.io/badge/Android11-📱-green.svg)](https://developer.android.com/preview)
+[![Wiki](https://img.shields.io/badge/Wiki-📚-pink.svg)](https://github.com/hakzzang/Burnout/wiki)
+![Last Commit](https://img.shields.io/github/last-commit/hakzzang/Burnout)
+
+번아웃을 재미있게 해결해보고자, 멘탈을 건강하게 하는 `Health`를 주제로 프로젝트를 진행합니다.<br/>
+<a href="https://festa.io/events/1111" target="_blank">안드로이드11 끝장개발대회</a> 참여 프로젝트입니다.
+
+<br/>
+
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/25583321/91629470-5bd9f180-ea04-11ea-9cbb-b986cf77605b.png"  
+     width="520px" height="292.5px" href="https://github.com/ggujangi/ggu.system.ui/files/4094927/System.UI.Visibility.ppt.pptx"/>
+</p>
+<p align="center">
+    👆👆
+  <br/> <br/>
+    <a href="https://github.com/hakzzang/Burnout/files/5144815/BURNOUT_._._.pptx" target="_blank">번아웃_챌린지 발표자료</a>
+</p>
+
+
+
+
+# About
+
+### 🔥 팀 HBS
+- 문병학<br/>
+    ✔️ AAC, Jetpack, Coroutine, Material Design <br/>
+    ✔️ 채팅 UI, 기능 개발
+    
+- 조희영<br/>
+    ✔️ TF Lite, CameraX, Sketch Library <br/>
+    ✔️ 미션 화면 UI, 기능 개발
+
+- 이홍주<br/>
+    ✔️ ScopedStorage,  <br/>
+    ✔️ 미션 결과 UI, 기능 개발
+
+
+### 💡 특징
+
+- 프로젝트는 다크테마와 가로모드를 고려했습니다 🌗
+- 프로젝트는 머터리얼 트랜지션을 고려했고, 머터리얼 디자인 뷰를 사용했습니다 ✏️
+- 프로젝트는 Dagger2-Hilt를 사용했습니다 🗡️
+
+
+### 🌱 Android 11
+
+- 안드로이드 Bubble을 통한 채팅 시스템을 고려하고 있습니다 🧼
+- 안드로이드에서 제공하는 최신 Jetpack Library를 사용하고 있습니다 🚄
+
+### ⚽ 목표
+- 인공지능을 통한 새판별기를 구현하려고 합니다 🐤
+- 채팅 UI 기반의 게임을 구현하려고 합니다 💬
+- SNS 챌린지를 만드는 앱을 구현하려고 합니다 💪
+
+
+
+
+# Schedule
+
+![date](https://user-images.githubusercontent.com/22374750/89760983-694c3c00-db28-11ea-98d1-9ec6bd0ace47.png)
+
+## Week 1
 
 ### 0. 프로젝트 개요
 
@@ -20,12 +86,27 @@
 
 ![image](https://user-images.githubusercontent.com/22374750/89758212-3acb6280-db22-11ea-8e5d-e8a979664eec.png)
 
-### 3. 일정
 
-![date](https://user-images.githubusercontent.com/22374750/89760983-694c3c00-db28-11ea-98d1-9ec6bd0ace47.png)
+## Week 2
+### 채팅 프로젝트 만들기
 
-### 4. 관심 분야에 따른 개발 영역
+![image](https://user-images.githubusercontent.com/22374750/90979282-0b3f4000-e58f-11ea-91f3-57298ba9601f.png)
 
-- 홍주님 : Storage -> SNS에 사진 공유
-- 희영님 : ml kit -> 카메라 인식
-- 병학님 : AAC, Jetpack, Coroutine -> 채팅
+### 이미지 인식 기능
+#### 사용된 Android 기능 및 기술
+- CameraX: https://developer.android.com/training/camerax
+ -- 카메라 priview와 캡쳐 기능 사용
+- Navigation: https://developer.android.com/guide/navigation
+ -- 카메라의 프리뷰와 캡쳐 결과 화면, 퍼미션 화면간 이동에 사용
+- TensorFlow Lite: https://developer.android.com/ml
+ -- 사용된 tf lite 용 모델 및 예제
+  1. 새 이미지 인식 (TF 허브) :https://tfhub.dev/google/aiy/vision/classifier/birds_V1/1
+  2. 이미지 인식 (TF 허브) :https://tfhub.dev/tensorflow/lite-model/efficientnet/lite4/fp32/1
+  3. 스케치 인식 : https://github.com/jtheiner/SketchRecognition/
+- ML binding: https://developer.android.com/studio/preview/features?hl=fr#tensor-flow-lite-models
+ -- tflite 모델 바인딩에 사용
+ 
+## Week 3
+### 스테이지 & 뱃지함 리스트 추가
+
+![image](https://user-images.githubusercontent.com/22374750/91059945-4f9d0f80-e665-11ea-902f-347f73792a88.png)

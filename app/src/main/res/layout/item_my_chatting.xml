@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/chatting_item_container_margin"
+        android:layout_marginTop="@dimen/chatting_item_container_margin"
+        android:layout_marginEnd="@dimen/chatting_item_container_margin">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.0"/>
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_profile"
+            android:layout_width="@dimen/chatting_profile_image_size"
+            android:layout_height="@dimen/chatting_profile_image_size"
+            android:background="@android:color/black"
+            android:elevation="@dimen/chatting_profile_image_elevation"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/CircleImageView"
+            app:strokeColor="@android:color/white"
+            app:strokeWidth="@dimen/chatting_profile_image_outline" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_chatting_recognize_image"
+            android:layout_width="@dimen/chatting_recognize_image_width"
+            android:layout_height="@dimen/chatting_recognize_image_height"
+            android:layout_margin="@dimen/chatting_dialog_margin_text"
+            android:visibility="visible"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearance="@style/ShapeAppearance.LargeComponent.Round"
+            tools:background="@mipmap/ic_launcher" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_view_chatting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/chatting_small_margin_dimen"
+            android:layout_marginTop="@dimen/chatting_small_margin_dimen"
+            android:layout_marginRight="@dimen/chatting_dialog_margin_to_profile"
+            app:cardBackgroundColor="@color/colorAccent"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="@id/iv_profile"
+            app:layout_constraintTop_toBottomOf="@id/iv_chatting_recognize_image"
+            app:layout_goneMarginTop="18dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_chatting"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/chatting_dialog_margin_text"
+                android:textColor="@android:color/black"
+                tools:text="hello~~~~~~~~~~~~~~~~~~~~~~~" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottie_view_wait"
+                android:layout_width="@dimen/chatting_wait_animation_width"
+                android:layout_height="@dimen/chatting_wait_animation_height"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="wait.json"
+                app:lottie_loop="true" />
+
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

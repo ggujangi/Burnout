@@ -6,14 +6,17 @@ import androidx.interpolator.view.animation.FastOutSlowInInterpolator
 import com.google.android.material.transition.platform.MaterialArcMotion
 import com.google.android.material.transition.platform.MaterialContainerTransform
 
-
 object TransitionConfigure {
-    const val START_DURATION = 500L
-    const val END_DURATION = 500L
+    const val START_DURATION = 350L
+    const val END_DURATION = 350L
+    const val ARC_TYPE = "ARC_TYPE"
+    const val LINEAR_TYPE = "LINEAR_TYPE"
+    const val TRANSITION_TYPE = "TRANSITION_TYPE"
 }
 
 object TransitionNavigation{
-    const val MISSION = "MISSION"
+    const val CHATTING_TRANSITION_LINEAR = "CHATTING_TRANSITION_LINEAR"
+    const val CHATTING_TRANSITION_ARC = "CHATTING_TRANSITION_ARC"
 }
 
 interface BurnoutTransitionManager {
@@ -55,10 +58,11 @@ class BurnoutTransitionManagerImpl : BurnoutTransitionManager {
             return MaterialContainerTransform().apply {
                 scrimColor = Color.TRANSPARENT
                 duration = TransitionConfigure.END_DURATION
+                interpolator = FastOutSlowInInterpolator()
                 fadeMode = if(isForward){
-                    MaterialContainerTransform.FIT_MODE_AUTO
+                    MaterialContainerTransform.FADE_MODE_IN
                 }else{
-                    MaterialContainerTransform.FIT_MODE_AUTO
+                    MaterialContainerTransform.FADE_MODE_OUT
                 }
             }
         }
